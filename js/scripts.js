@@ -6,20 +6,22 @@ function Ticket (movie, showtime, age) {
 }
 
 Ticket.prototype.getTicket = function () {
-
   if (this.age >= 60) {
-    return 7;
+    return "$7";
   } else if (this.showtime < 17) {
-    return 10;
+    return "$10";
   } else {
-    return 12;
+    return "$12";
   }
 }
 
-
-
-
-
+Ticket.prototype.getShowtime = function() {
+  if (this.showtime > 12) {
+    return (this.showtime - 12) + " PM";
+  } else {
+    return this.showtime + " AM";
+  }
+}
 
 //user-interface logic
 $(document).ready(function() {
@@ -33,7 +35,7 @@ $(document).ready(function() {
 
     $(".result").show();
     $(".movieTitle").append(customerTicket.movie);
-    $(".time").append(customerTicket.showtime);
+    $(".time").append(customerTicket.getShowtime());
     $(".ticketPrice").append(customerTicket.getTicket());
   });
 });
