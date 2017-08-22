@@ -8,6 +8,28 @@
     <title>Movie Tickets</title>
   </head>
   <body>
-
+    <div class="container">
+      <form id="movie-info">
+        <div class="form-group">
+          <label for="title">Movie:</label>
+          <select class="form-control" id="title">
+            <option>Batman</option>
+            <option>Superman</option>
+            <option>Wonder Woman</option>
+            <option>Spiderman</option>
+            <option>X-Men</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="showtime">Showtime:</label>
+          <input type="time" id="showtime" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="age">Age:</label>
+          <input type="number" id="age" class="form-control">
+        </div>
+        <button type="submit" class="btn">Order</button>
+      </form>
+    </div>
   </body>
 </html>
