@@ -33,9 +33,11 @@ $(document).ready(function() {
 
     var customerTicket = new Ticket(title, showTime, age);
 
-    $(".result").show();
+    $(".result").slideToggle();
+    $("form").slideToggle();
     $(".movieTitle").append(customerTicket.movie);
     $(".time").append(customerTicket.getShowtime());
     $(".ticketPrice").append(customerTicket.getTicket());
+    $(".poster").append("<img src='img/" + customerTicket.movie + ".jpeg' alt='" + customerTicket.movie + "poster'>");
   });
 });
