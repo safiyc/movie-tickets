@@ -31,9 +31,9 @@ $(document).ready(function() {
 
     var customerTicket = new Ticket(title, showTime, age);
 
-    console.log(customerTicket.getTicket());
-
-
-
+    $(".result").show();
+    $(".movieTitle").append(customerTicket.movie);
+    $(".time").append(customerTicket.showtime);
+    $(".ticketPrice").append(customerTicket.getTicket());
   });
 });
