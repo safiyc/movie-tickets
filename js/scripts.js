@@ -28,7 +28,7 @@ $(document).ready(function() {
   $("form#movie-info").submit(function(event){
     event.preventDefault();
     var title = $("select#title").val();
-    var showTime = parseInt($("input#showtime").val());
+    var showTime = parseInt($("select#showtime").val());
     var age = parseInt($("input#age").val());
 
     var customerTicket = new Ticket(title, showTime, age);
